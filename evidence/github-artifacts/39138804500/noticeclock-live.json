@@ -1,0 +1,111 @@
+{
+  "app": "noticeclock",
+  "contract": "0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "chainId": 61999,
+  "caseId": "GLV4-noticeclock-39138804500",
+  "state": "BLOCKED",
+  "txs": [
+    {
+      "method": "create_case",
+      "hash": "0xc50e096a1265fdb92cd7dc395909469d61a909c5ae79d39c85aa37f08cbee626",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_AGREE",
+      "verifiedCaseState": "DRAFT"
+    },
+    {
+      "method": "consent",
+      "hash": "0x2ece31376f054af610d48831f23987231ebbcf9d7f79b283a45f10a59b06c2d6",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_AGREE",
+      "verifiedCaseState": "DRAFT"
+    },
+    {
+      "method": "freeze",
+      "hash": "0xaa254b5d7c92ed182105ffcdcc28428a37c323f609870aea72bf71e53c5676a4",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_AGREE",
+      "verifiedCaseState": "FROZEN"
+    },
+    {
+      "method": "submit_evidence",
+      "hash": "0x410c122cac209978800f95af000440c4c3e5770ee622a6bc399ed7d8e4a4bbd0",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_AGREE",
+      "verifiedCaseState": "EVIDENCE_LOCKED"
+    },
+    {
+      "method": "attest_evidence",
+      "hash": "0xdcd3a1d967f7618305fbb04bef853eabcde0748ab3cdd904c9c0c1346067db39",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_AGREE",
+      "verifiedCaseState": "ATTESTED"
+    },
+    {
+      "method": "adjudicate",
+      "hash": "0xf83a2f945460013560f2c6363133d9d1717801c37246447fceeb12390ffbee21",
+      "phase": "FINALIZED",
+      "execution": [
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        },
+        {
+          "result": "SUCCESS",
+          "stderr": ""
+        }
+      ],
+      "consensus": "MAJORITY_DISAGREE"
+    }
+  ],
+  "error": "Error: Live adjudicate canonical state mismatch {\"attestation_hash\":\"fef2e8cea547e60ae2fea3299bcc8fab363fdaf5862aaca0232e6ab74a3383de\",\"attested\":true,\"attested_at\":1792336028,\"attestor\":\"0xee4df80f72bbe51bf5addc32a41e19ff7e658bd9\",\"challenge_hash\":\"\",\"challenge_text\":\"\",\"challenges\":[],\"consented\":true,\"created\":1792335870,\"creator\":\"0xe3f4fcb8b11c4fc258c0aeed52bfd9d14403b0c7\",\"cure_deadline\":1792422269,\"deadline\":1792422269,\"evidence\":\"On-chain attestor voucher: a signed notice cites clause 7, identifies non-delivery, specifies cure within "
+}
