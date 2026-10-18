@@ -1,0 +1,31 @@
+{
+  "address": "0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "hash": "b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13",
+  "abi": "cef0fd7d95e3e616bc62644966e692e28ec805bf1fa738043a0e75e71dc043a4",
+  "case": "NCQUAL-39142055216",
+  "verdict": "INCONCLUSIVE",
+  "workflow": 39142055216,
+  "semantic": [
+    "0x9da1849d0615ad7f5a1437e97e2f6ff2b9b39dcf4c0329e93f8107722377044f",
+    "0xc7cb1d6cee79506c6358a5f7ef0b032db0e499c3102d1af5170ed45e8265a378"
+  ],
+  "final": "0x610961d3f4e1121586a113463f41547de22ae2bb14cad95fe7fe1e7531cdcaa8",
+  "app": null,
+  "name": "NoticeClock",
+  "short": "Assess a contractual notice and cure record against frozen terms using independent semantic consensus, with an explicit inconclusive outcome.",
+  "problem": "Parties disagree over whether a notice identifies an applicable breach and states a sufficiently clear cure.",
+  "solution": "Freezes the clause and designated third-party attestor before evidence is locked, then classifies breach, applicability and cure specificity with bounded independent validator evaluation.",
+  "outcomes": "READY, INVALID, or INCONCLUSIVE. A final verdict is recorded only after the challenge window or a second round.",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "repo": "https://github.com/GIFTEDLOV/noticeclock",
+  "sourceFile": "contracts/noticeclock.py",
+  "schemaSha256": "cef0fd7d95e3e616bc62644966e692e28ec805bf1fa738043a0e75e71dc043a4",
+  "chainId": 61999,
+  "caseStatus": "FINALIZED",
+  "workflowUrl": "https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216",
+  "sourceProvenanceRun": "https://github.com/GIFTEDLOV/driftproof/actions/runs/39138161003",
+  "firstRoundTx": "0x9da1849d0615ad7f5a1437e97e2f6ff2b9b39dcf4c0329e93f8107722377044f",
+  "secondRoundTx": "0xc7cb1d6cee79506c6358a5f7ef0b032db0e499c3102d1af5170ed45e8265a378",
+  "finalizationTx": "0x610961d3f4e1121586a113463f41547de22ae2bb14cad95fe7fe1e7531cdcaa8",
+  "productionQualification": "INCOMPLETE: public app remains RELEASE_QUALIFIED=false pending signed-browser live E2E; do not submit as a fully qualified frontend."
+}

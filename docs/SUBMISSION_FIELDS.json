@@ -1,0 +1,20 @@
+{
+  "projectName": "NoticeClock",
+  "shortDescription": "Assess contractual notice and cure evidence against frozen terms with independent semantic consensus and an explicit inconclusive outcome.",
+  "detailedDescription": "NoticeClock coordinates a three-party case in which the parties freeze a notice/cure clause, submit evidence, and nominate a distinct attestor wallet. GenLayer validators independently assess whether a breach is identified, the clause applies, and the requested cure is clear. State changes remain bounded by the frozen terms, challenge rights, and deterministic deadlines.",
+  "problemSolved": "Parties disagree whether a notice identifies an applicable breach and states a sufficiently clear cure.",
+  "whyGenLayer": "This requires semantic evaluation of natural-language clauses and evidence under independent validator execution. A deterministic workflow cannot decide whether notice text substantively satisfies a frozen contractual standard.",
+  "semanticConsensus": "Inside gl.vm.run_nondet_unsafe, the leader and validators independently evaluate breach_identified, clause_applicable, requested_cure_clear, and evidence_sufficient. The response has the precise boolean schema. The contract derives READY, INVALID, or INCONCLUSIVE deterministically; disagreement cannot become approval.",
+  "githubRepository": "https://github.com/GIFTEDLOV/noticeclock",
+  "productionApp": null,
+  "chainId": 61999,
+  "contractAddress": "0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "explorerUrl": "https://explorer-studio.genlayer.com/address/0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "sourceSha256": "b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13",
+  "abiSchemaSha256": "cef0fd7d95e3e616bc62644966e692e28ec805bf1fa738043a0e75e71dc043a4",
+  "qualificationCase": "NCQUAL-39142055216",
+  "terminalVerdict": "INCONCLUSIVE",
+  "evidencePath": "evidence/noticeclock-live.json",
+  "reviewInstructions": "Inspect contracts/noticeclock.py and evidence/noticeclock-live.json for NCQUAL-39142055216. Its terminal result is INCONCLUSIVE. The full successful workflow is 39142055216. Do not claim the earlier failed 39138804500 NoticeClock lifecycle as passed. This is a standalone contract with no app URL.",
+  "knownLimitations": "An attestor signature proves control of the agreed wallet, not real-world issuer identity or notice authenticity. The contract does not give legal advice, authenticate physical documents, or transfer funds. Test evidence was synthetic and explicitly labeled."
+}

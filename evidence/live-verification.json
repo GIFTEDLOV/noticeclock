@@ -1,0 +1,43 @@
+{
+  "project": "NoticeClock",
+  "chainId": 61999,
+  "address": "0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "sourceSha256": "b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13",
+  "abiSchemaSha256": "cef0fd7d95e3e616bc62644966e692e28ec805bf1fa738043a0e75e71dc043a4",
+  "sourceParity": true,
+  "abiParity": true,
+  "caseId": "NCQUAL-39142055216",
+  "status": "FINALIZED",
+  "verdict": "INCONCLUSIVE",
+  "round": 2,
+  "challenges": 2,
+  "historyEntries": 2,
+  "historyHashChain": true,
+  "receipts": [
+    {
+      "hash": "0x9da1849d0615ad7f5a1437e97e2f6ff2b9b39dcf4c0329e93f8107722377044f",
+      "phase": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "successfulLeaderExecutions": 1,
+      "postQuorumCancellations": 1,
+      "validatorCount": 4
+    },
+    {
+      "hash": "0xc7cb1d6cee79506c6358a5f7ef0b032db0e499c3102d1af5170ed45e8265a378",
+      "phase": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "successfulLeaderExecutions": 2,
+      "postQuorumCancellations": 0,
+      "validatorCount": 4
+    },
+    {
+      "hash": "0x610961d3f4e1121586a113463f41547de22ae2bb14cad95fe7fe1e7531cdcaa8",
+      "phase": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "successfulLeaderExecutions": 2,
+      "postQuorumCancellations": 0,
+      "validatorCount": 4
+    }
+  ],
+  "checkedAt": "2026-10-18T19:54:03.759Z"
+}
