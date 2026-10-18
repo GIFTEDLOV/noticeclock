@@ -1,0 +1,10 @@
+{
+  "app": "noticeclock",
+  "chainId": 61999,
+  "address": "0x99D41333f28913BA45Fc36C64eb0A88D1600F350",
+  "sourceSha256": "b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13",
+  "installedSourceSha256": "b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13",
+  "sourceByteParity": "PASS",
+  "originalDeployRun": 39138161003,
+  "originalDeployCommit": "5e1d96fec2484b5fea5d1c8cfb3777ba9f51a352"
+}

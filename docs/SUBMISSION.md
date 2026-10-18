@@ -1,4 +1,4 @@
-# GenLayer submission dossier — NoticeClock
+# GenLayer submission dossier ? NoticeClock
 
 ## Project name
 
@@ -10,58 +10,67 @@ Assess contractual notice and cure evidence against frozen terms with independen
 
 ## Detailed description
 
-NoticeClock coordinates a three-party case in which the parties freeze a notice/cure clause, submit evidence, and nominate a distinct attestor wallet. GenLayer validators independently assess whether a breach is identified, the clause applies, and the requested cure is clear. State changes remain bounded by the frozen terms, challenge rights, and deterministic deadlines.
+NoticeClock coordinates a three-party case in which the parties freeze a notice/cure clause, submit evidence, and nominate a distinct attestor wallet. GenLayer validators independently assess whether a breach is identified, the clause applies, and the requested cure is clear. State changes remain bounded by frozen terms, challenge rights, and deterministic deadlines.
 
 ## Problem solved
 
-Parties disagree whether a notice identifies an applicable breach and states a sufficiently clear cure.
+Parties disagree over whether a notice identifies an applicable breach and states a sufficiently clear cure.
 
 ## Why this requires a GenLayer Intelligent Contract
 
-This requires semantic evaluation of natural-language clauses and evidence under independent validator execution. A deterministic workflow cannot decide whether notice text substantively satisfies a frozen contractual standard.
+Validators need to interpret natural-language notice and evidence against the precise frozen clause. Deterministic code cannot make that semantic assessment; the contract keeps its powers, roles, deadlines and result schema deterministic.
 
 ## Genuine semantic-consensus behavior
 
-Inside gl.vm.run_nondet_unsafe, the leader and validators independently evaluate breach_identified, clause_applicable, requested_cure_clear, and evidence_sufficient. The response has the precise boolean schema. The contract derives READY, INVALID, or INCONCLUSIVE deterministically; disagreement cannot become approval.
+Inside gl.vm.run_nondet_unsafe, the leader and validators independently evaluate breach_identified, clause_applicable, requested_cure_clear and evidence_sufficient. A strict boolean schema is checked. Contract code derives READY, INVALID or INCONCLUSIVE; disagreement cannot silently approve.
 
-## GitHub repository URL
+The leader and validators independently execute the semantic evaluation. The result is schema-validated and contract code alone maps it to permitted outcomes. Evidence and challenge text are untrusted input. Disagreement and invalid output cannot silently become approval. Challenge periods and finalization use contract transaction time.
 
-[https://github.com/GIFTEDLOV/noticeclock](https://github.com/GIFTEDLOV/noticeclock)
+## GitHub repository
 
-## Production app URL
+https://github.com/GIFTEDLOV/noticeclock
 
-Not applicable: standalone Intelligent Contract; no app is claimed.
+## Production app
+
+Not applicable: standalone Intelligent Contract.
 
 ## Studionet deployment
 
-- Chain 61999, RPC `https://studio.genlayer.com/api`
+- Network: GenLayer Studionet
+- Chain ID: `61999`
+- Canonical RPC: `https://studio.genlayer.com/api`
 - Contract: [0x99D41333f28913BA45Fc36C64eb0A88D1600F350](https://explorer-studio.genlayer.com/address/0x99D41333f28913BA45Fc36C64eb0A88D1600F350)
-- Explorer: [https://explorer-studio.genlayer.com/address/0x99D41333f28913BA45Fc36C64eb0A88D1600F350](https://explorer-studio.genlayer.com/address/0x99D41333f28913BA45Fc36C64eb0A88D1600F350)
-- Verified source SHA-256: `b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13`
+- Verified deployed source SHA-256: `b968431218e2b8e1e24264a13a81c9cadde7a2d321e661df50e907dbed545e13`
 - ABI schema SHA-256: `cef0fd7d95e3e616bc62644966e692e28ec805bf1fa738043a0e75e71dc043a4`
 
-## Live demonstration evidence
+## Live demonstration and evidence
 
-- Case `NCQUAL-39142055216` finalized at round 2; recorded verdict **INCONCLUSIVE**.
-- First and second semantic transaction hashes and finalization hash are preserved in `evidence/noticeclock-live.json`.
-- [GitHub workflow run 39142055216](https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216); exact transaction explorer links are included in the source artifact.
-- Qualification source records are synthetic and labelled; this proves GenLayer behavior, not a real-world issuer’s identity or the truth of a physical record.
+- Historic case: `NCQUAL-39142055216`; status `FINALIZED`; terminal verdict **INCONCLUSIVE**.
+- Qualification workflow: [run 39142055216](https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216).
+- Deployed contract and source parity evidence: `evidence/live-verification.json`.
+- The successful NoticeClock lifecycle is case `NCQUAL-39142055216`; the earlier workbench NoticeClock attempt is preserved as BLOCKED because its canonical adjudication state did not match.
 
 ## Security and qualification summary
 
-The deployed V4 source is byte-identical to the repository source; the deployed ABI matches the locally generated schema. The local regression suite covers role separation, state transitions, source hashes, strict semantic schemas, validator disagreement, prompt injection, challenge fairness, deadlines, duplicates/replay, numeric bounds, address-serialization compatibility and history integrity. Live workflow evidence records transaction status, GenVM execution and canonical readback.
+Tests and CI cover role separation, immutable terms, string and SDK address serialization, invalid transitions, strict semantic schema, prompt boundaries, disagreement handling, challenge timing, evidence provenance, history integrity, and finalization. The independently verified live outcome is INCONCLUSIVE; the contract correctly did not turn uncertainty into approval.
 
-This standalone contract has no browser-signing acceptance criterion.
+- Exact-main CI: [workflow run 39161740779](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779) passed for the then-current main commit. Release-preparation exact-head CI and version tag CI will be linked on the repository release.
+- CI covers Python tests, GenVM lint, ABI/schema, source provenance, security analysis and app SDK/build/browser tests where applicable.
+- No unresolved Critical or High issue was identified in the release audit.
+- The historic 39138804500 workbench is not represented as a four-project PASS: NoticeClock was BLOCKED; the other three project artifacts individually report PASS. NoticeClock's later case 39142055216 passed its lifecycle, with terminal verdict INCONCLUSIVE.
 
 ## Instructions for reviewers
 
-1. Inspect `contracts/noticeclock.py` and verify its hash and ABI using `npm run verify:live`.
-2. Run `python -m pytest -q`, `python -m genvm_linter.cli lint contracts/noticeclock.py`, `npm ci`, and `npm run verify:live`.
-3. Read `evidence/noticeclock-live.json`; preserve the terminal verdict shown above.
-4. For apps, open the production URL read-only; wallet signing is deliberately disabled until its real signed-browser qualification completes.
+1. Inspect `contracts/noticeclock.py` and `release.json`.
+2. Verify the deployed source and ABI against the hashes above using the checked-in read-only verifier.
+3. Review the case and receipt evidence under `evidence/`; a FINALIZED label is not treated as proof without successful GenVM execution and canonical state readback.
+4. Confirm this is a standalone contract submission; it does not claim a production app.
+5. Treat all qualification cases and source records as synthetic test inputs; do not infer real-world events.
 
 ## Known limitations and external trust assumptions
 
-An attestor signature proves control of the agreed wallet, not real-world issuer identity or notice authenticity. The contract does not give legal advice, authenticate physical documents, or transfer funds. Test evidence was synthetic and explicitly labeled.
+The live qualification used explicitly labeled synthetic evidence. An attestor signature proves control of the nominated wallet, not the real-world sender's identity or notice authenticity. The contract is not legal advice, a document-authentication service, or a payment/settlement system. All cases remain in append-only storage; there is no deletion or pruning interface.
 
-Public case creation has no global lifetime cap. Pagination limits each page to 100 records, but total storage and the legacy `get_case_ids()` view can grow. Semantic execution depends on available non-deterministic model services and validator execution; disagreement is not approval. Invoice/minute outputs do not settle assets.
+## Portal status
+
+The submission fields and evidence package are **prepared for immediate Portal entry**. The final Portal submission has **not** been made. It requires an authenticated Builder Portal session and explicit final-submit authorization; no claim of submission or steward approval is made.
