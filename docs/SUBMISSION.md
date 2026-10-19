@@ -54,7 +54,7 @@ Not applicable: standalone Intelligent Contract.
 
 Tests and CI cover role separation, immutable terms, string and SDK address serialization, invalid transitions, strict semantic schema, prompt boundaries, disagreement handling, challenge timing, evidence provenance, history integrity, and finalization. The independently verified live outcome is INCONCLUSIVE; the contract correctly did not turn uncertainty into approval.
 
-- Exact-main CI: [workflow run 39161740779](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779) passed for the then-current main commit. Release-preparation exact-head CI and version tag CI will be linked on the repository release.
+- Exact-main CI: [workflow run 39175259896](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39175259896) passed for the then-current main commit. The repository Actions history and versioned release provide the exact-HEAD and version-tag qualification results.
 - CI covers Python tests, GenVM lint, ABI/schema, source provenance, security analysis and app SDK/build/browser tests where applicable.
 - No unresolved Critical or High issue was identified in the release audit.
 - The historic 39138804500 workbench is not represented as a four-project PASS: NoticeClock was BLOCKED; the other three project artifacts individually report PASS. NoticeClock's later case 39142055216 passed its lifecycle, with terminal verdict INCONCLUSIVE.

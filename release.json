@@ -13,9 +13,10 @@
   "terminalVerdict": "INCONCLUSIVE",
   "qualificationWorkflow": "https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216",
   "exactMainCi": {
-    "runId": 39161740779,
-    "url": "https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779",
-    "status": "PASS"
+    "runId": 39175259896,
+    "url": "https://github.com/GIFTEDLOV/noticeclock/actions/runs/39175259896",
+    "status": "PASS",
+    "headSha": "0ad9ce4794d60059dd0bfe6c6bb20583f413762a"
   },
   "productionApp": null,
   "productionDeployment": null,
@@ -51,6 +52,7 @@
   "caseStatus": "FINALIZED",
   "workflowUrl": "https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216",
   "sourceProvenanceRun": "https://github.com/GIFTEDLOV/driftproof/actions/runs/39138161003",
-  "exactMainCiUrl": "https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779",
-  "productionQualification": "Standalone deployed V4 contract source and ABI verified; complete historic lifecycle finalized with recorded inconclusive/review outcome; Portal dossier prepared, not submitted."
+  "exactMainCiUrl": "https://github.com/GIFTEDLOV/noticeclock/actions/runs/39175259896",
+  "productionQualification": "Standalone deployed V4 contract source and ABI verified; complete historic lifecycle finalized with recorded inconclusive/review outcome; Portal dossier prepared, not submitted.",
+  "exactMainCommit": "0ad9ce4794d60059dd0bfe6c6bb20583f413762a"
 }

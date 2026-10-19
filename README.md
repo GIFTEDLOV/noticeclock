@@ -26,7 +26,7 @@ Inside gl.vm.run_nondet_unsafe, the leader and validators independently evaluate
 
 - Historic case: `NCQUAL-39142055216`, terminal `INCONCLUSIVE`; source data is synthetic and explicitly labeled.
 - Historic qualification: [GitHub Actions run 39142055216](https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216).
-- Project exact-head CI: [run 39161740779](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779).
+- Project exact-head CI: [run 39175259896](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39175259896).
 - This is a standalone contract; no frontend app is claimed.
 
 ## Release and submission status
