@@ -14,7 +14,7 @@
 
 - Historic qualification case `NCQUAL-39142055216` finalized `INCONCLUSIVE`; details and transaction hashes are in the checked-in evidence.
 - Qualification Actions: [run 39142055216](https://github.com/GIFTEDLOV/driftproof/actions/runs/39142055216).
-- Latest exact-main qualification CI before release preparation: [run 39161740779](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39161740779).
+- Latest exact-main qualification CI on the release preparation baseline: [run 39175259896](https://github.com/GIFTEDLOV/noticeclock/actions/runs/39175259896).
 
 This repository has no production app URL; it is intentionally a standalone contract submission.
 
